@@ -1,121 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paribesh Sapkota - Portfolio</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        /* Header with Background Image */
-        header {
-            background: url('https://images.pexels.com/photos/1236701/pexels-photo-1236701.jpeg') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 3rem 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Fade in animation */
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out;
+    }
 
-        header h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        header p {
-            font-size: 1.2rem;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-        }
-    </style>
+    /* Slide-in from left */
+    .slide-left {
+      animation: slideLeft 1.5s ease-in-out;
+    }
+
+    @keyframes slideLeft {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+  </style>
 </head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <h1>Paribesh Sapkota</h1>
-     
-    </header>
+<body class="bg-gray-900 text-white font-sans">
 
-    <!-- Navigation -->
-    <nav>
-        <ul><li><a href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="asset/cv.pdf" class="btn" target="_blank">View CV</a></li>
-        </ul>
-    </nav>
+  <!-- Hero -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 bg-gradient-to-b from-gray-900 to-gray-800 fade-in">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-pulse">Hi, I'm Paribesh 👋</h1>
+    <p class="text-xl text-gray-300 mb-6">Backend Developer | Laravel Enthusiast | Tailwind Lover</p>
+    <a href="#contact" class="bg-purple-600 hover:bg-purple-700 transition px-6 py-3 rounded-full text-white text-lg font-semibold shadow-lg">Hire Me</a>
+  </section>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Passionate about backend development with Laravel and mobile app development with Flutter.</p>
-        <a href="mailto:sapkotap1521@gmail.com" class="btn">Get in Touch</a>
-    </section>
+  <!-- About -->
+  <section class="py-20 px-6 bg-gray-800 slide-left">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p class="text-gray-300 text-lg">I’m a passionate backend developer specializing in Laravel. I build clean and efficient backend systems, and I love turning ideas into reality using code.</p>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="content">
-            <img src="images/White Teal Videocentric Travel YouTube Channel Logo.png" alt="Paribesh Sapkota">
-            <p>Hello! I'm Paribesh Sapkota, a Laravel and Flutter enthusiast pursuing my Bachelor's in Information Management. I love creating intuitive web and mobile solutions. Let's build something amazing together!</p>
+  <!-- Skills -->
+  <section class="py-20 px-6 bg-gray-900 fade-in">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-gray-800 p-4 rounded-lg hover:scale-105 transform transition">
+          <p>Laravel</p>
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-chart" id="skills-chart"></div>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-container">
-            <div class="project">
-                <h3>Digital_Logic Notes</h3>
-                <p>Developed a feature-rich simple html css design user insert Notes 
-                    <a href="https://github.com/sapk2/Digital_Logic" target="_blank" class="btn">View on GitHub</a>
-                </p>
-            </div>
-            <div class="project">
-                <h3>college site Demo</h3>
-                <p>Developed a feature-rich simple html css design user insert Notes 
-                    <a href="https://sapk2.github.io/collegewebsite/" target="_blank" class="btn">View on GitHub</a>
-                </p>
-            </div>
-            <div class="project">
-                <h3>Mobile App Prototype</h3>
-                <p>Designed a Flutter-based mobile app prototype for a healthcare platform, ensuring user-friendly interfaces and smooth performance.
-                    <a href="https://github.com/sapk2/bmical" target="_blank" class="btn">View on GitHub</a>
-                </p>
-            </div>
+        <div class="bg-gray-800 p-4 rounded-lg hover:scale-105 transform transition">
+          <p>PHP</p>
         </div>
-    </section>
-    
+        <div class="bg-gray-800 p-4 rounded-lg hover:scale-105 transform transition">
+          <p>MySQL</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg hover:scale-105 transform transition">
+          <p>Tailwind CSS</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-container">
-            <a href="gallery.html" class="btn">View Gallery</a>
+  <!-- Projects -->
+  <section class="py-20 px-6 bg-gray-800 slide-left">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Projects</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-700 p-4 rounded-lg hover:scale-105 transform transition shadow-lg">
+          <h3 class="text-xl font-semibold">Gym Scheduler</h3>
+          <p class="text-gray-300 text-sm">Laravel + Tailwind</p>
+        </div>
+        <div class="bg-gray-700 p-4 rounded-lg hover:scale-105 transform transition shadow-lg">
+          <h3 class="text-xl font-semibold">Quiz System</h3>
+          <p class="text-gray-300 text-sm">Laravel + Livewire</p>
+        </div>
+        <div class="bg-gray-700 p-4 rounded-lg hover:scale-105 transform transition shadow-lg">
+          <h3 class="text-xl font-semibold">News Portal</h3>
+          <p class="text-gray-300 text-sm">Laravel + Alpine.js</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-           </div>
-    </section>
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-6 bg-gray-900 fade-in">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+      <p class="text-gray-400 mb-6">Let’s connect for freelance or collaboration!</p>
+      <form class="space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full px-4 py-2 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
+        <input type="email" placeholder="Your Email" class="w-full px-4 py-2 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
+        <textarea placeholder="Message" rows="4" class="w-full px-4 py-2 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+        <button class="bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded-full font-semibold transition">Send Message</button>
+      </form>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out for collaboration or just a friendly chat.</p>
-        <p>Email: <a href="mailto:sapkotap1521@gamil.com"><box-icon type='logo' name='gmail'></box-icon></a></p>
-    </section>
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-gray-800 text-gray-400 text-sm">
+    © {{ date('Y') }} Paribesh. All rights reserved.
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2022 Paribesh Sapkota. All rights reserved.</p>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="js/skills.js"></script>
 </body>
 </html>
